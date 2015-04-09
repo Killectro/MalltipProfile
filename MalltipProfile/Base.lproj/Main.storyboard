@@ -1,25 +1,227 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.otf">
+            <string>FontAwesome</string>
+        </mutableArray>
+        <mutableArray key="ProximaNova-Bold.otf">
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+            <string>ProximaNova-Bold</string>
+        </mutableArray>
+        <mutableArray key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-cover-image-background" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-E8-unL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="tTT-xg-vLp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nuN-MM-hK8">
+                                <rect key="frame" x="16" y="31" width="86" height="86"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Xnq-BF-FIf"/>
+                                    <constraint firstAttribute="width" constant="86" id="k8V-oE-ay3"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1d0-eL-C5w" appends="YES" id="Qni-As-alO"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW YORK, NY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-0n-awd">
+                                <rect key="frame" x="131" y="63" width="84.5" height="12"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IfS-KQ-6Ar" customClass="JEProgressView">
+                                <rect key="frame" x="120" y="83" width="160" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="LUi-Ug-Gqx"/>
+                                </constraints>
+                                <color key="trackTintColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane Washington" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-wc-EY9">
+                                <rect key="frame" x="120" y="43" width="121" height="16"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADV-Rd-tL6">
+                                <rect key="frame" x="120" y="102" width="24.5" height="10"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW BADGES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgB-Fp-mfW">
+                                <rect key="frame" x="213" y="102" width="67" height="10"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 32" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xc-U0-Qkk">
+                                <rect key="frame" x="231" y="85.5" width="43.5" height="10"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="10"/>
+                                <color key="textColor" white="0.79080177920000005" alpha="0.54000000000000004" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5r-VQ-HWv">
+                                <rect key="frame" x="120" y="62" width="7" height="12"/>
+                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaV-Kb-u3G">
+                                <rect key="frame" x="16" y="156" width="288" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="g3a-Tr-gtI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <state key="normal" title="Like Malltip on Facebook - 20 points">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XK4-gy-pcG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-m2-rm5">
+                                <rect key="frame" x="16" y="202" width="288" height="38"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <state key="normal" title="Follow Malltip on Twitter - 20 points">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Yt-j7-2wj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxw-0u-Muj">
+                                <rect key="frame" x="16" y="248" width="288" height="38"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <state key="normal" title="Share Malltip with a friend - 30 points">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hUg-3U-kym"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VTN-ja-vWI">
+                                <rect key="frame" x="49" y="64" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="BbY-uU-vOJ"/>
+                                    <constraint firstAttribute="width" constant="20" id="a2L-st-o8u"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLl-wY-Bpu">
+                                <rect key="frame" x="16" y="31" width="86" height="86"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="69"/>
+                                <color key="textColor" white="1" alpha="0.45000000000000001" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IfS-KQ-6Ar" secondAttribute="trailing" constant="24" id="2DY-68-P9w"/>
+                            <constraint firstItem="3NG-E8-unL" firstAttribute="centerY" secondItem="nuN-MM-hK8" secondAttribute="centerY" id="2bZ-9t-fST"/>
+                            <constraint firstItem="hxw-0u-Muj" firstAttribute="top" secondItem="9fN-m2-rm5" secondAttribute="bottom" constant="8" id="3KL-3f-VCv"/>
+                            <constraint firstItem="IfS-KQ-6Ar" firstAttribute="trailing" secondItem="cgB-Fp-mfW" secondAttribute="trailing" id="4UY-9v-Bxi"/>
+                            <constraint firstItem="WsV-0n-awd" firstAttribute="top" secondItem="BCT-wc-EY9" secondAttribute="bottom" constant="4" id="4p2-kW-Z85"/>
+                            <constraint firstItem="nuN-MM-hK8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="5IE-U5-hpC"/>
+                            <constraint firstItem="ADV-Rd-tL6" firstAttribute="top" secondItem="IfS-KQ-6Ar" secondAttribute="bottom" constant="4" id="7Wt-vV-uX6"/>
+                            <constraint firstItem="cgB-Fp-mfW" firstAttribute="top" secondItem="IfS-KQ-6Ar" secondAttribute="bottom" constant="4" id="8BL-T1-oz9"/>
+                            <constraint firstItem="IfS-KQ-6Ar" firstAttribute="centerY" secondItem="9Xc-U0-Qkk" secondAttribute="centerY" id="8Pg-v7-7di"/>
+                            <constraint firstItem="nuN-MM-hK8" firstAttribute="centerX" secondItem="fLl-wY-Bpu" secondAttribute="centerX" id="8Yt-cF-bS2"/>
+                            <constraint firstItem="nuN-MM-hK8" firstAttribute="centerY" secondItem="T5r-VQ-HWv" secondAttribute="bottom" id="BoQ-B2-MFB"/>
+                            <constraint firstItem="nuN-MM-hK8" firstAttribute="height" secondItem="fLl-wY-Bpu" secondAttribute="height" id="EPd-Kn-GHL"/>
+                            <constraint firstItem="9fN-m2-rm5" firstAttribute="top" secondItem="FaV-Kb-u3G" secondAttribute="bottom" constant="8" id="M5M-eA-At9"/>
+                            <constraint firstItem="3NG-E8-unL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="O48-3L-dfd"/>
+                            <constraint firstItem="FaV-Kb-u3G" firstAttribute="width" secondItem="9fN-m2-rm5" secondAttribute="width" id="RT0-BG-n6b"/>
+                            <constraint firstItem="WsV-0n-awd" firstAttribute="leading" secondItem="T5r-VQ-HWv" secondAttribute="trailing" constant="4" id="SPM-Xv-FA8"/>
+                            <constraint firstItem="WsV-0n-awd" firstAttribute="baseline" secondItem="T5r-VQ-HWv" secondAttribute="baseline" id="TBx-GR-H29"/>
+                            <constraint firstItem="IfS-KQ-6Ar" firstAttribute="leading" secondItem="nuN-MM-hK8" secondAttribute="trailing" constant="18" id="U4M-Ub-J0M"/>
+                            <constraint firstItem="nuN-MM-hK8" firstAttribute="width" secondItem="fLl-wY-Bpu" secondAttribute="width" id="U6V-2b-V4N"/>
+                            <constraint firstItem="FaV-Kb-u3G" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="UGT-Lj-ews"/>
+                            <constraint firstItem="ADV-Rd-tL6" firstAttribute="leading" secondItem="IfS-KQ-6Ar" secondAttribute="leading" id="V6U-DT-lAo"/>
+                            <constraint firstItem="FaV-Kb-u3G" firstAttribute="height" secondItem="9fN-m2-rm5" secondAttribute="height" id="Wwe-ir-Hz0"/>
+                            <constraint firstItem="9Xc-U0-Qkk" firstAttribute="trailing" secondItem="IfS-KQ-6Ar" secondAttribute="trailing" constant="-5" id="Wzf-ZN-Dzq"/>
+                            <constraint firstItem="nuN-MM-hK8" firstAttribute="centerY" secondItem="fLl-wY-Bpu" secondAttribute="centerY" id="Xc6-Ff-YDN"/>
+                            <constraint firstItem="FaV-Kb-u3G" firstAttribute="centerX" secondItem="9fN-m2-rm5" secondAttribute="centerX" id="Xko-6C-njv"/>
+                            <constraint firstItem="3NG-E8-unL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="b6u-Hd-HMJ"/>
+                            <constraint firstItem="FaV-Kb-u3G" firstAttribute="top" secondItem="3NG-E8-unL" secondAttribute="bottom" constant="8" id="c7L-aX-TS6"/>
+                            <constraint firstItem="fLl-wY-Bpu" firstAttribute="centerX" secondItem="VTN-ja-vWI" secondAttribute="centerX" id="lyb-gu-5wp"/>
+                            <constraint firstItem="fLl-wY-Bpu" firstAttribute="centerY" secondItem="VTN-ja-vWI" secondAttribute="centerY" id="oLt-TW-oP8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3NG-E8-unL" secondAttribute="trailing" constant="-16" id="rNG-4b-bEm"/>
+                            <constraint firstItem="9fN-m2-rm5" firstAttribute="centerX" secondItem="hxw-0u-Muj" secondAttribute="centerX" id="rR1-Eg-bMz"/>
+                            <constraint firstItem="9fN-m2-rm5" firstAttribute="height" secondItem="hxw-0u-Muj" secondAttribute="height" id="sKx-4A-KQA"/>
+                            <constraint firstItem="IfS-KQ-6Ar" firstAttribute="top" secondItem="WsV-0n-awd" secondAttribute="bottom" constant="8" id="ulu-qj-NcP"/>
+                            <constraint firstItem="T5r-VQ-HWv" firstAttribute="leading" secondItem="nuN-MM-hK8" secondAttribute="trailing" constant="18" id="uvW-MA-sE1"/>
+                            <constraint firstItem="9fN-m2-rm5" firstAttribute="width" secondItem="hxw-0u-Muj" secondAttribute="width" id="vBL-Yf-e9J"/>
+                            <constraint firstItem="FaV-Kb-u3G" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="yOI-SI-omC"/>
+                            <constraint firstItem="BCT-wc-EY9" firstAttribute="leading" secondItem="nuN-MM-hK8" secondAttribute="trailing" constant="18" id="zE8-fY-LTp"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="VTN-ja-vWI" id="pn1-kz-5OJ"/>
+                        <outlet property="facebookButton" destination="FaV-Kb-u3G" id="AiE-jB-LPD"/>
+                        <outlet property="levelLabel" destination="9Xc-U0-Qkk" id="RWC-IF-AAA"/>
+                        <outlet property="levelProgressView" destination="IfS-KQ-6Ar" id="oPx-a0-iF4"/>
+                        <outlet property="locationLabel" destination="WsV-0n-awd" id="m5X-6L-8as"/>
+                        <outlet property="mapMarkerIcon" destination="T5r-VQ-HWv" id="Rp1-2e-rFw"/>
+                        <outlet property="nameLabel" destination="BCT-wc-EY9" id="7Lh-Hu-8y8"/>
+                        <outlet property="plusButtonLabel" destination="fLl-wY-Bpu" id="VnH-r5-1yf"/>
+                        <outlet property="pointsLabel" destination="ADV-Rd-tL6" id="QFA-ii-JcO"/>
+                        <outlet property="profileImageView" destination="nuN-MM-hK8" id="Ujh-tQ-buu"/>
+                        <outlet property="shareButton" destination="hxw-0u-Muj" id="PsJ-JT-ccF"/>
+                        <outlet property="twitterButton" destination="9fN-m2-rm5" id="RoO-eF-LfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1d0-eL-C5w">
+                    <connections>
+                        <action selector="addPhotoPressed:" destination="vXZ-lx-hvc" id="grY-8s-Jfl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="149" y="107"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile-cover-image-background" width="275" height="183"/>
+    </resources>
 </document>

@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class JEProgressView;
 
+@interface ViewController : UIViewController <UIActionSheetDelegate>
+
+@property (nonatomic) NSUInteger totalScore;
+@property (nonatomic) NSUInteger level;
+@property (nonatomic) NSUInteger currentProgress;
 
 @end
 
