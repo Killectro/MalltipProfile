@@ -54,10 +54,6 @@ NSUInteger const kPointsPerLevel = 100;
     [self customizeImageView];
     [self customizeProgressView];
     [self updateScoreInterface];
-    
-    // TODO: Mention the bug with Facebook
-    // TODO: Mention the bug with UIProgressView
-    // TODO: Mention the bug with JEProgressView and UIAlertController (that's the reason why I had to use UIAlertView/UIActionSheet)
 }
 
 #pragma mark - Custom accessors
@@ -72,7 +68,8 @@ NSUInteger const kPointsPerLevel = 100;
 }
 
 - (NSUInteger)level {
-    _level = (NSUInteger) self.totalScore / kPointsPerLevel;
+    // 1-index the level
+    _level = ((NSUInteger) self.totalScore / kPointsPerLevel) + 1;
     return _level;
 }
 
